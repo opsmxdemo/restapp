@@ -287,9 +287,9 @@ public class GreetingController {
 		String result="{ \"catCount\": 0.1 }";
 
 		try{
-			Thread ch = new Thread();
+			//Thread ch = new Thread();
 			//ch.sleep(30);
-			throw new Exception(); 
+			//throw new Exception(); 
 			// LOG.info("catcount-Latency ");
 		}catch(Exception ex) {
 			LOG.error("ERROR: ", ex);
