@@ -196,7 +196,7 @@ public class GreetingController {
 		try{
 			Thread dh = new Thread();
 			//dh.sleep(30);
-			writeException1();
+			//writeException1();
 			//LOG.info("dogcount-Latency ");
 		}catch(Exception ex) {
 			LOG.error("Error: ", ex);
