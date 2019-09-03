@@ -23,7 +23,7 @@ pipeline {
      }
      stage('Push Image'){
         steps {
-              withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+              withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
               }
               sh "sudo docker push opsmx11/restapp:${IMAGE}"
 	 }
