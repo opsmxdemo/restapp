@@ -6,7 +6,7 @@ pipeline {
     environment { 
          IMAGE="simple-1.0"
        }
-  stages {
+ stages {
      stage('restapp build'){
        steps{
 	  sh 'echo Building ${BRANCH_NAME} ....'
@@ -27,7 +27,6 @@ pipeline {
               }
               sh "sudo docker push opsmx11/restapp:${IMAGE}"
 	 }
-     }
-  } 
+     } 
   } 
 }
