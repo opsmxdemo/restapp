@@ -22,10 +22,12 @@ pipeline {
         }
      }
      stage('Push Image'){
-       steps {
-           sh "sudo docker login --username opsmx11 --password Networks123!"
-           sh "sudo docker push opsmx11/restapp:${IMAGE}"
+        steps {
+              withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+              }
+              sh "sudo docker push opsmx11/restapp:${IMAGE}"
 	 }
      }
+  } 
   } 
 }
