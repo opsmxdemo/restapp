@@ -7,7 +7,7 @@ pipeline {
          IMAGE="simple-1.0"
        }
  stages {
-     stage('restapp build'){
+     stage('Restapp build'){
        steps{
 	  sh 'echo Building ${BRANCH_NAME} ....'
 	  sh 'sh /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/M3/bin/mvn -e clean install'
