@@ -69,7 +69,7 @@ public class GreetingController {
 		//LOG.error("Unable to find properties file : java.io.FileNotFoundException at void hello line number ");
 
 		// ***** memory leakdemonstrating  *****//
-		LOG.info("Memeroy Leak enabled:");
+		/* LOG.info("Memeroy Leak enabled:");
 		if (MEMORY_LEAK_TEST_STRING == null || MEMORY_LEAK_TEST_STRING.length() == 0) {
 			for (int i = 0; i < 10000; i++) {
 				String test = "" + i + "" + i + "" + i;
@@ -84,7 +84,7 @@ public class GreetingController {
 
 		    //Commented the following line, causes problems with mem util 
 	        //BAD_KEY_MAP.put(badKey, "" + (new Date().getTime()) + "-" + (new Date().getTime()) + MEMORY_LEAK_TEST_STRING);		  
-		
+		*/
 		//***End of Memory leak code ***//
 
 		//Demonstrating Architectural Regression/*	POSTGRES_NUM_OPS_METRIC_COUNT += 1;
