@@ -68,7 +68,7 @@ public class GreetingController {
 		//LOG.error("Encountered java.lang.InterruptedException while reading the images in the method : /greeting");
 		//LOG.error("Unable to find properties file : java.io.FileNotFoundException at void hello line number ");
 
-		// ***** memory leakdemonstrating  *****//
+		// ***** memory leakdemonstrating  ******//
 		/* LOG.info("Memeroy Leak enabled:");
 		if (MEMORY_LEAK_TEST_STRING == null || MEMORY_LEAK_TEST_STRING.length() == 0) {
 			for (int i = 0; i < 10000; i++) {
