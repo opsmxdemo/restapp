@@ -202,7 +202,7 @@ public class GreetingController {
 		}catch(Exception ex) {
 			LOG.error("Error: ", ex);
 		}	
-		String response = "{ \"dogCount\": 0.2 }";
+		String response = "{ \"dogCount\": 2.0 }";
 		LOG.debug("END: dogCount" + "\n" + response);
 		return response;
 	}
@@ -285,7 +285,7 @@ public class GreetingController {
 	@RequestMapping("/catcount")
 	public String catCount() {
 		LOG.info("BEGIN: catCount");
-		String result="{ \"catCount\": 0.1 }";
+		String result="{ \"catCount\": 1.0 }";
 
 		try{
 			//Thread ch = new Thread();
