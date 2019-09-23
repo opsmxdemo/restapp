@@ -193,7 +193,7 @@ public class GreetingController {
 
 	@RequestMapping("/dogcount")
 	public String dogCount() {
-		LOG.debug("BEGIN: dogCount APi");
+		LOG.debug("BEGIN: dogCount");
 		try{
 			Thread dh = new Thread();
 			//dh.sleep(30);
