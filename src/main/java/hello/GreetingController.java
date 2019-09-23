@@ -85,7 +85,7 @@ public class GreetingController {
 		    //Commented the following line, causes problems with mem util 
 	        //BAD_KEY_MAP.put(badKey, "" + (new Date().getTime()) + "-" + (new Date().getTime()) + MEMORY_LEAK_TEST_STRING);		  
 		*/
-		//***End of Memory leak code ***//
+		//***End of Memory leak code ****//
 
 		//Demonstrating Architectural Regression/*	POSTGRES_NUM_OPS_METRIC_COUNT += 1;
 		//Architectural Regression implementation has been shifted to ArchRegress.java, here only calling thread class.
