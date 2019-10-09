@@ -95,7 +95,7 @@ public class GreetingController {
 		// //Thread th = new Thread(test);
 
 		try{
-			Thread th = new Thread();
+			//Thread th = new Thread();
 			//th.sleep(40);
 			//LOG.info("Greeting-Latency ");
 			//th.start();
