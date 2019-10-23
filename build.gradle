@@ -86,7 +86,7 @@ task packDeb(type: Deb, dependsOn: fatJar) {
     packageName = 'restapp'
     version = 1.0
 
-   requires('openjdk-7-jre-headless')
+   requires('openjdk-8-jdk-headless')
      from('build/libs/.') {
      into "/opt/restapp"
   }
