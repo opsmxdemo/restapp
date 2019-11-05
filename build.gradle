@@ -38,8 +38,8 @@ repositories {
     jcenter()
 }
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 
 dependencies {
@@ -65,6 +65,8 @@ dependencies {
     
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('com.jayway.jsonpath:json-path')
+
+    compile 'javax.xml.bind:jaxb-api:2.3.0'
 }
 
 task fatJar(type: Jar) {
@@ -79,14 +81,14 @@ task fatJar(type: Jar) {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.3'
+    gradleVersion = '5.0'
 }
 
-task packDeb(type: Deb, dependsOn: fatJar) {
+task packDeb(type: Deb, dependsOn: bootRepackage) {
     packageName = 'restapp'
     version = 1.0
 
-   requires('openjdk-7-jre-headless')
+   requires('openjdk-8-jre-headless')
      from('build/libs/.') {
      into "/opt/restapp"
   }
