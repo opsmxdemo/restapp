@@ -214,8 +214,8 @@ public class GreetingController {
 		} 
 		catch(NullPointerException e) 
 		{ 
-			LOG.error("Encountered java.lang.InterruptedException while reading the images {}" , e.getStackTrace());
-			LOG.error("Unable to find properties file : java.io.FileNotFoundException at void hello line number: {}", e.getStackTrace());
+			LOG.error("Encountered java.lang.InterruptedException while reading the images {}" , e.getMessage());
+			LOG.error("Unable to find properties file : java.io.FileNotFoundException at void hello line number: {}", e.getMessage());
 			//LOG.error("ERROR ",e);
 		} 
 		return  "Generating Exceptions like java.lang.InterruptedException and java.io.FileNotFoundException";
@@ -228,8 +228,8 @@ public class GreetingController {
 		} 
 		catch(NullPointerException e) 
 		{ 
-			LOG.error("Encountered java.lang.InterruptedException while reading the images {}" , e.getStackTrace());
-			LOG.error("Unable to find properties file : java.io.FileNotFoundException at void hello line number: {}", e.getStackTrace());
+			LOG.error("Encountered java.lang.InterruptedException while reading the images {}" , e.getMessage());
+			LOG.error("Unable to find properties file : java.io.FileNotFoundException at void hello line number: {}", e.getMessage());
 			//LOG.error("ERROR ",e);
 		} 
 		return  "Generating Exceptions like java.lang.InterruptedException and java.io.FileNotFoundException";
