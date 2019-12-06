@@ -1,7 +1,7 @@
 pipeline {
   agent any
     triggers {
-       pollSCM('*/2 * * * *')
+       pollSCM('H/2 * * * *')
     }
     environment { 
        IMAGE="simple-1.0"
@@ -10,7 +10,7 @@ pipeline {
      stage('restapp build'){
        steps{
 	      sh 'echo Building ${BRANCH_NAME} ....'
-	      sh 'sh /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/M3/bin/mvn -e clean install'
+	      sh 'sh $JENKINS_HOME/tools/hudson.tasks.Maven_MavenInstallation/M3/bin/mvn -e clean install'
        }
      }
      stage('Build Docker Image'){
@@ -23,9 +23,9 @@ pipeline {
      }
      stage('Push Image'){
         steps {
-              withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+              withCredentials([usernamePassword(credentialsId: 'Docker-hub-devcredentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
               }
-              sh "sudo docker push opsmx11/restapp:${IMAGE}"
+             // sh "sudo docker push opsmx11/restapp:${IMAGE}"
 	 }
      }
   } 
