@@ -13,7 +13,7 @@ spec:
         app: opsmx-restapp
     spec:
       containers:
-        - image: docker.io/opsmx11/restapp
+        - image: docker.io/opsmx11/restapp:${#stage("Build")["context"]["Buildnumber"]}
           imagePullPolicy: Always
           name: restapp
           ports:
