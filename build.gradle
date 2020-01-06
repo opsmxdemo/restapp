@@ -105,5 +105,5 @@ task packDeb(type: Deb, dependsOn: fatJar) {
     from(configurations.runtime) {
         into 'lib'
     }
-}
+
 }
