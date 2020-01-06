@@ -105,10 +105,5 @@ task packDeb(type: Deb, dependsOn: fatJar) {
     from(configurations.runtime) {
         into 'lib'
     }
-  task MyTest(type: Test) {
-    def my_vars = ['newport': '9292', 'WEBDRIVER_TIMEOUT': '30000']
-    useTestNG() {
-        environment my_vars
-    }
 }
 }
