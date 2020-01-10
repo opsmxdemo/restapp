@@ -291,7 +291,7 @@ public class GreetingController {
 		try{
 			Thread ch = new Thread();
 			ch.sleep(30);
-			throw new Exception(); 
+			//throw new Exception(); 
 			 LOG.info("catcount-Latency ");
 		}catch(Exception ex) {
 			LOG.error("ERROR: ", ex);
