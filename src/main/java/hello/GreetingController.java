@@ -70,7 +70,7 @@ public class GreetingController {
 		//LOG.error("Unable to find properties file : java.io.FileNotFoundException at void hello line number ");
 
 		// ***** memory leakdemonstrating  ******//
-		 LOG.info("Memeroy Leak enabled:");
+	/*      LOG.info("Memeroy Leak enabled:");
 		if (MEMORY_LEAK_TEST_STRING == null || MEMORY_LEAK_TEST_STRING.length() == 0) {
 			for (int i = 0; i < 10000; i++) {
 				String test = "" + i + "" + i + "" + i;
@@ -82,7 +82,7 @@ public class GreetingController {
 		}
 		BadKey badKey = new BadKey("");
 		badKey = new BadKey("" + (new Date().getTime()));
-
+	*/
 		    //Commented the following line, causes problems with mem util 
 	        //BAD_KEY_MAP.put(badKey, "" + (new Date().getTime()) + "-" + (new Date().getTime()) + MEMORY_LEAK_TEST_STRING);		  
 	    
@@ -96,10 +96,10 @@ public class GreetingController {
 		// //Thread th = new Thread(test);
 
 		try{
-			//Thread th = new Thread();
-			//th.sleep(40);
-			//LOG.info("Greeting-Latency ");
-			//th.start();
+			Thread th = new Thread();
+			th.sleep(40);
+			LOG.info("Greeting-Latency ");
+			th.start();
 		}catch(Exception ex) {
 			LOG.error("Error: ", ex);
 		}	
@@ -197,9 +197,9 @@ public class GreetingController {
 		LOG.debug("BEGIN: dogCount");
 		try{
 			Thread dh = new Thread();
-			//dh.sleep(30);
+			dh.sleep(30);
 			writeException1();
-			//LOG.info("dogcount-Latency ");
+			LOG.info("dogcount-Latency ");
 		}catch(Exception ex) {
 			LOG.error("Error: ", ex);
 		}	
@@ -289,10 +289,10 @@ public class GreetingController {
 		String result="{ \"catCount\": 1.0 }";
 
 		try{
-			//Thread ch = new Thread();
-			//ch.sleep(30);
-			//throw new Exception(); 
-			// LOG.info("catcount-Latency ");
+			Thread ch = new Thread();
+			ch.sleep(30);
+			throw new Exception(); 
+			 LOG.info("catcount-Latency ");
 		}catch(Exception ex) {
 			LOG.error("ERROR: ", ex);
 		}
