@@ -106,7 +106,7 @@ task packDeb(type: Deb, dependsOn: bootRepackage) {
     from(configurations.runtime) {
         into 'lib'
     }
-
+}
 task packRpm(type: Rpm, dependsOn: bootRepackage) {
     packageName = 'restapp'
     version = 1.0
