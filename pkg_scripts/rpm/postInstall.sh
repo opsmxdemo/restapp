@@ -2,9 +2,9 @@
 
 ## FOR RPM BUILDS
 ln -s /opt/restapp/restapp-0.1.0.jar /etc/init.d/restapp
-#chkconfig: 345 99 10
+#chkconfig: 2345 24 96
 #description: restapp auto start-stop script.
-chkconfig --level 345 restapp
+chkconfig --level 2345 restapp
 chkconfig --add restapp
 
 ###====> for Newrelic monitor
