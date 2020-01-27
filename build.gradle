@@ -109,15 +109,17 @@ task packDeb(type: Deb, dependsOn: bootRepackage) {
 }
 task packRpm(type: Rpm, dependsOn: bootRepackage) {
     packageName = 'restapp'
-    version = 1.0
+    version = '1.0'
+    release = '1'
     os = LINUX
 
    requires('java')
      from('build/libs/.') {
      into "/opt/restapp"
-    }
- 
-   postInstall = file('pkg_scripts/rpm/postInstall.sh')
+  }
+    postInstall = file('pkg_scripts/postInstall.sh')
+    preUninstall = file('pkg_scripts/preUninstall.sh')
+    postUninstall = file('pkg_scripts/postUninstall.sh')
 
     from(jar.outputs.files) {
         into 'lib'
