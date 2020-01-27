@@ -94,7 +94,7 @@ task packDeb(type: Deb, dependsOn: bootRepackage) {
      into "/opt/restapp"
     }
 	
-   preInstall = file('pkg_scripts/deb/postInstall.sh')
+   postInstall = file('pkg_scripts/deb/postInstall.sh')
   
     from(jar.outputs.files) {
         into 'lib'
@@ -117,7 +117,7 @@ task packRpm(type: Rpm, dependsOn: bootRepackage) {
      into "/opt/restapp"
     }
  
-   preInstall = file('pkg_scripts/rpm/postInstall.sh')
+   postInstall = file('pkg_scripts/rpm/postInstall.sh')
 
     from(jar.outputs.files) {
         into 'lib'
