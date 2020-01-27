@@ -117,9 +117,9 @@ task packRpm(type: Rpm, dependsOn: bootRepackage) {
      from('build/libs/.') {
      into "/opt/restapp"
   }
-    postInstall = file('pkg_scripts/postInstall.sh')
-    preUninstall = file('pkg_scripts/preUninstall.sh')
-    postUninstall = file('pkg_scripts/postUninstall.sh')
+    postInstall = file('pkg_scripts/rpm/postInstall.sh')
+    preUninstall = file('pkg_scripts/rpm/preUninstall.sh')
+    postUninstall = file('pkg_scripts/rpm/postUninstall.sh')
 
     from(jar.outputs.files) {
         into 'lib'
