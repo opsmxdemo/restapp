@@ -330,6 +330,27 @@ public class GreetingController {
 		LOG.debug("END: catCount" + "\n" + result);
 		return result;
 	}
+        
+	 @RequestMapping("/welcome")
+        public String mainbanner() {
+                LOG.info("Hello folks :: Inside welcome API");
+                String querys;
+                StringBuffer bn = new StringBuffer();
+                ClassLoader mbc = GreetingController.class.getClassLoader();
+                try{
+                        BufferedReader br = new BufferedReader(new InputStreamReader(mbc.getResource("opsmxpage.html").openStream()));
+                        while((querys=br.readLine())!=null)
+                                bn.append(querys);
+                        br.close();
+
+                }
+                catch(Exception e){
+                        e.printStackTrace();
+                        LOG.error("Error: " + e);
+                }
+                String bannerResponse = bn.length()>0 ? bn.toString() : " No page found";
+                return bannerResponse;
+        }
 
 	@RequestMapping("/status")
 	public String getStatus() {
