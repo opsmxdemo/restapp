@@ -331,7 +331,7 @@ public class GreetingController {
 		return result;
 	}
         
-	 @RequestMapping("/welcome")
+	 @RequestMapping("/")
         public String mainbanner() {
                 LOG.info("Hello folks :: Inside welcome API");
                 String querys;
