@@ -67,7 +67,7 @@ public class GreetingController {
 	@RequestMapping("/greeting")
 	public String greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
 		LOG.debug("BEGIN: greeting api");  
-		System.out.println("Trigger test: 4");
+		System.out.println("Trigger test: 5");
 		//LOG.error("Encountered java.lang.InterruptedException while reading the images in the method : /greeting");
 		//LOG.error("Unable to find properties file : java.io.FileNotFoundException at void hello line number ");
 
