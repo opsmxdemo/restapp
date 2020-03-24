@@ -1,5 +1,5 @@
 package hello;
-// //my comments
+//my comments
 
 import java.sql.Connection;
 import java.sql.DriverManager;
